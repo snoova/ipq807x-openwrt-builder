@@ -41,7 +41,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: robimarko/openwrt
-          ref: IPQ807x-5.10-backports
+          ref: IPQ807x-5.15
       - name: Update and install feeds
         run: |
           ./scripts/feeds update -a
