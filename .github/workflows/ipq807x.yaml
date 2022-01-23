@@ -68,6 +68,8 @@ jobs:
           #echo "CONFIG_PACKAGE_kmod-qca-nss-drv-pppoe=y\n" >> .config
           #echo "CONFIG_PACKAGE_kmod-qca-nss-ecm=y\n" >> .config
           #echo "CONFIG_PACKAGE_kmod-qca-nss-drv-bridge-mgr=y\n" >> .config
+          echo "CONFIG_PACKAGE_wireguard=y" >> .config
+
           
           echo "CONFIG_PACKAGE_announce=y" >> .config
           echo "CONFIG_PACKAGE_arp-scan=y" >> .config
@@ -96,19 +98,15 @@ jobs:
           echo "CONFIG_PACKAGE_luci=y" >> .config
           echo "CONFIG_PACKAGE_luci-base=y" >> .config
           echo "CONFIG_PACKAGE_luci-compat=y" >> .config
-          echo "CONFIG_PACKAGE_luci-theme-openwrt-2020=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-nlbwmon=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-dawn=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-ddns=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-firewall=y" >> .config
-          echo "CONFIG_PACKAGE_luci-app-openvpn=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-qos=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-upnp=y" >> .config
           echo "CONFIG_PACKAGE_luci-mod-dashboard=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-wireguard=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-ddns=y" >> .config
-          echo "CONFIG_PACKAGE_openvpn-openssl=y" >> .config
-          echo "CONFIG_PACKAGE_wireguard=y" >> .config
           echo "CONFIG_PACKAGE_less=n" >> .config
           echo "CONFIG_PACKAGE_wpad-mini=n" >> .config
           echo "CONFIG_PACKAGE_wpad-basic-wolfssl=n" >> .config
