@@ -91,7 +91,6 @@ jobs:
           echo "CONFIG_PACKAGE_miniupnpd=y" >> .config
           echo "CONFIG_PACKAGE_procd-seccomp=y" >> .config
           echo "CONFIG_PACKAGE_qos-scripts=y" >> .config
-          echo "CONFIG_PACKAGE_umdns=y" >> .config
           echo "CONFIG_PACKAGE_wget=y" >> .config
           echo "CONFIG_PACKAGE_wpad-wolfssl=y" >> .config
 
