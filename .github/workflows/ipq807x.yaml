@@ -63,14 +63,21 @@ jobs:
           echo 'CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256' >> .config
           echo 'CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y' >> .config
           echo 'CONFIG_TARGET_OPTIMIZATION="-Os -pipe -mcpu=cortex-a53"' >> .config
+          #firmware
           echo "CONFIG_PACKAGE_nss-firmware-ipq8074=y" >> .config
           echo "CONFIG_PACKAGE_kmod-qca-nss-dp=y" >> .config
-          #echo "CONFIG_PACKAGE_kmod-qca-nss-drv-pppoe=y\n" >> .config
           #echo "CONFIG_PACKAGE_kmod-qca-nss-ecm=y\n" >> .config
+          #echo "CONFIG_PACKAGE_kmod-qca-nss-drv=y\n" >> .config
+          #echo "CONFIG_PACKAGE_kmod-qca-nss-drv-pppoe=y\n" >> .config
           #echo "CONFIG_PACKAGE_kmod-qca-nss-drv-bridge-mgr=y\n" >> .config
+          #echo "CONFIG_PACKAGE_kmod-qca-nss-drv-vlan-mgr=y\n" >> .config
+          # wpad full
+          echo "CONFIG_PACKAGE_curl=y" >> .config
+          echo "CONFIG_PACKAGE_wpad-mini=n" >> .config
+          echo "CONFIG_PACKAGE_wpad-basic-wolfssl=n" >> .config
+          echo "CONFIG_PACKAGE_wpad-wolfssl=y" >> .config
+          # services and tools
           echo "CONFIG_PACKAGE_wireguard=y" >> .config
-
-          
           echo "CONFIG_PACKAGE_announce=y" >> .config
           echo "CONFIG_PACKAGE_arp-scan=y" >> .config
           echo "CONFIG_PACKAGE_bind-host=y" >> .config
@@ -91,8 +98,7 @@ jobs:
           echo "CONFIG_PACKAGE_procd-seccomp=y" >> .config
           echo "CONFIG_PACKAGE_qos-scripts=y" >> .config
           echo "CONFIG_PACKAGE_wget=y" >> .config
-          echo "CONFIG_PACKAGE_wpad-wolfssl=y" >> .config
-
+          # luci
           echo "CONFIG_PACKAGE_luci=y" >> .config
           echo "CONFIG_PACKAGE_luci-base=y" >> .config
           echo "CONFIG_PACKAGE_luci-compat=y" >> .config
@@ -105,8 +111,18 @@ jobs:
           echo "CONFIG_PACKAGE_luci-app-wireguard=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-ddns=y" >> .config
           echo "CONFIG_PACKAGE_less=n" >> .config
-          echo "CONFIG_PACKAGE_wpad-mini=n" >> .config
-          echo "CONFIG_PACKAGE_wpad-basic-wolfssl=n" >> .config
+          # firewall4
+          echo "CONFIG_IPTABLES_NFTABLES=y" >> .config
+          echo "CONFIG_PACKAGE_firewall=n" >> .config
+          echo "CONFIG_PACKAGE_ip6tables=n" >> .config
+          echo "CONFIG_PACKAGE_iptables=n" >> .config
+          echo "CONFIG_PACKAGE_kmod-ipt-offload=n" >> .config
+          echo "CONFIG_PACKAGE_firewall4=y" >> .config
+          echo "CONFIG_PACKAGE_nftables=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-nft-offload=y" >> .config
+          echo "CONFIG_NETFILTER_NETLINK=m" >> .config
+          echo "CONFIG_NETFILTER_NETLINK_HOOK=m" >> .config
+          
           make defconfig
       - name: Enable WiFi on default config
         run: |
