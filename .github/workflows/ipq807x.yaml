@@ -111,15 +111,11 @@ jobs:
           echo "CONFIG_PACKAGE_luci-app-wireguard=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-ddns=y" >> .config
           echo "CONFIG_PACKAGE_less=n" >> .config
-          # firewall4
-          echo "CONFIG_IPTABLES_NFTABLES=y" >> .config
-          echo "CONFIG_PACKAGE_firewall=n" >> .config
-          echo "CONFIG_PACKAGE_ip6tables=n" >> .config
-          echo "CONFIG_PACKAGE_iptables=n" >> .config
-          echo "CONFIG_PACKAGE_kmod-ipt-offload=n" >> .config
-          echo "CONFIG_PACKAGE_firewall4=y" >> .config
-          echo "CONFIG_PACKAGE_nftables=y" >> .config
-          echo "CONFIG_PACKAGE_kmod-nft-offload=y" >> .config
+          #firewall3
+          echo "CONFIG_PACKAGE_firewall=y" >> .config
+          echo "CONFIG_PACKAGE_ip6tables=y" >> .config
+          echo "CONFIG_PACKAGE_iptables=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-ipt-offload=y" >> .config
           echo "CONFIG_NETFILTER_NETLINK=m" >> .config
           echo "CONFIG_NETFILTER_NETLINK_HOOK=m" >> .config
           
