@@ -30,7 +30,7 @@ jobs:
     name: Build the remote repository
     needs: check
     runs-on: ubuntu-latest
-    if: ${{ needs.check.outputs.commit_age <= 48 || github.event_name == 'workflow_dispatch' }}
+    if: ${{ needs.check.outputs.commit_age <= 24 || github.event_name == 'workflow_dispatch' }}
     steps:
       - name: Show inputs received from previous job
         env:
