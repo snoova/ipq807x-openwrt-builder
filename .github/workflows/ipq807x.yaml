@@ -122,14 +122,7 @@ jobs:
           echo "CONFIG_PACKAGE_kmod-nft-offload=y" >> .config
           echo "CONFIG_NETFILTER_NETLINK=m" >> .config
           echo "CONFIG_NETFILTER_NETLINK_HOOK=m" >> .config
-          #firewall3
-          #echo "CONFIG_PACKAGE_firewall=y" >> .config
-          #echo "CONFIG_PACKAGE_ip6tables=y" >> .config
-          #echo "CONFIG_PACKAGE_iptables=y" >> .config
-          #echo "CONFIG_PACKAGE_kmod-ipt-offload=y" >> .config
-          #echo "CONFIG_NETFILTER_NETLINK=m" >> .config
-          #echo "CONFIG_NETFILTER_NETLINK_HOOK=m" >> .config
-          
+        
           make defconfig
       - name: Enable WiFi on default config
         run: |
@@ -181,6 +174,6 @@ jobs:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           prerelease: true
           title: 'Updated prebuilt images (${{ env.BUILDINFO }})'
-          automatic_release_tag: ipq807x-latest@v4
+          automatic_release_tag: ipq807x-latest@v4.1
           files: bin/targets/ipq807x/generic/*
      
