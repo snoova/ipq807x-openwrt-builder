@@ -102,7 +102,8 @@ jobs:
           echo "CONFIG_PACKAGE_luci=y" >> .config
           echo "CONFIG_PACKAGE_luci-base=y" >> .config
           echo "CONFIG_PACKAGE_luci-compat=y" >> .config
-          echo "CONFIG_PACKAGE_luci-theme-bootstrap=y" >> .config          
+          echo "CONFIG_PACKAGE_luci-theme-bootstrap=y" >> .config
+          echo "CONFIG_PACKAGE_luci-theme-argon=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-ddns=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-firewall=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-qos=y" >> .config
