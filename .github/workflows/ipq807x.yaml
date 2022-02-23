@@ -121,15 +121,22 @@ jobs:
           echo "CONFIG_PACKAGE_firewall4=y" >> .config
           echo "CONFIG_PACKAGE_nftables=y" >> .config
           echo "CONFIG_PACKAGE_kmod-nft-offload=y" >> .config
+          #echo "CONFIG_PACKAGE_kmod-nft-conntrack=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-nft-flow=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-nft-ipt=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-nft-nat=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-nft-reject=y" >> .config
           echo "CONFIG_NETFILTER_NETLINK=m" >> .config
           echo "CONFIG_NETFILTER_NETLINK_HOOK=m" >> .config
-          #ipv6
-          # IPv6 support - removed because interfere with nftables
-          #echo "CONFIG_PACKAGE_luci-proto-ipv6=y" >> .config
-          #echo "CONFIG_PACKAGE_6in4=y" >> .config
-          #echo "CONFIG_PACKAGE_6to4=y" >> .config
-          #echo "CONFIG_PACKAGE_6rd=y" >> .config
-          #echo "CONFIG_PACKAGE_kmod-sit=y" >> .config          
+          # IPv6 support 
+          echo "CONFIG_PACKAGE_luci-proto-ipv6=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-nft-ipt6=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-nft-reject6=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-nft-conntrack6=y" >> .config
+          echo "CONFIG_PACKAGE_6in4=y" >> .config
+          echo "CONFIG_PACKAGE_6to4=y" >> .config
+          echo "CONFIG_PACKAGE_6rd=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-sit=y" >> .config          
           
           
           make defconfig
@@ -183,6 +190,6 @@ jobs:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           prerelease: true
           title: 'Updated prebuilt images (${{ env.BUILDINFO }})'
-          automatic_release_tag: ipq807x-latest@v4.3
+          automatic_release_tag: ipq807x-latest@v4.4
           files: bin/targets/ipq807x/generic/*
      
