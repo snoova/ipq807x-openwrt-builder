@@ -131,7 +131,7 @@ jobs:
           echo "CONFIG_PACKAGE_luci-proto-ipv6=y" >> .config
           echo "CONFIG_PACKAGE_kmod-nft-ipt6=y" >> .config
           echo "CONFIG_PACKAGE_kmod-nft-reject6=y" >> .config
-          echo "CONFIG_PACKAGE_kmod-nft-conntrack6=y" >> .config
+          #echo "CONFIG_PACKAGE_kmod-nft-conntrack6=y" >> .config
           echo "CONFIG_PACKAGE_6in4=y" >> .config
           echo "CONFIG_PACKAGE_6to4=y" >> .config
           echo "CONFIG_PACKAGE_6rd=y" >> .config
