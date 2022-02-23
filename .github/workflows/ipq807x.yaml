@@ -122,21 +122,21 @@ jobs:
           echo "CONFIG_PACKAGE_nftables=y" >> .config
           echo "CONFIG_PACKAGE_kmod-nft-offload=y" >> .config
           #echo "CONFIG_PACKAGE_kmod-nft-conntrack=y" >> .config
-          echo "CONFIG_PACKAGE_kmod-nft-flow=y" >> .config
+          #echo "CONFIG_PACKAGE_kmod-nft-flow=y" >> .config
           echo "CONFIG_PACKAGE_kmod-nft-ipt=y" >> .config
           echo "CONFIG_PACKAGE_kmod-nft-nat=y" >> .config
           echo "CONFIG_PACKAGE_kmod-nft-reject=y" >> .config
           echo "CONFIG_NETFILTER_NETLINK=m" >> .config
           echo "CONFIG_NETFILTER_NETLINK_HOOK=m" >> .config
           # IPv6 support 
-          #echo "CONFIG_PACKAGE_luci-proto-ipv6=y" >> .config
-          #echo "CONFIG_PACKAGE_kmod-nft-ipt6=y" >> .config
-          #echo "CONFIG_PACKAGE_kmod-nft-reject6=y" >> .config
+          echo "CONFIG_PACKAGE_luci-proto-ipv6=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-nft-ipt6=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-nft-reject6=y" >> .config
           #echo "CONFIG_PACKAGE_kmod-nft-conntrack6=y" >> .config
-          #echo "CONFIG_PACKAGE_6in4=y" >> .config
-          #echo "CONFIG_PACKAGE_6to4=y" >> .config
-          #echo "CONFIG_PACKAGE_6rd=y" >> .config
-          #echo "CONFIG_PACKAGE_kmod-sit=y" >> .config          
+          echo "CONFIG_PACKAGE_6in4=y" >> .config
+          echo "CONFIG_PACKAGE_6to4=y" >> .config
+          echo "CONFIG_PACKAGE_6rd=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-sit=y" >> .config          
           
           
           make defconfig
