@@ -137,9 +137,9 @@ jobs:
           echo "CONFIG_PACKAGE_6to4=y" >> .config
           echo "CONFIG_PACKAGE_6rd=y" >> .config
           echo "CONFIG_PACKAGE_kmod-sit=y" >> .config
-          #OpenVPN
-          echo "CONFIG_PACKAGE_luci-app-openvpn=y" >> .config
-          echo "CONFIG_PACKAGE_openvpn-openssl=y" >> .config
+          # OpenVPN
+          # echo "CONFIG_PACKAGE_luci-app-openvpn=y" >> .config
+          # echo "CONFIG_PACKAGE_openvpn-openssl=y" >> .config
           make defconfig
       - name: Enable WiFi on default config
         run: |
