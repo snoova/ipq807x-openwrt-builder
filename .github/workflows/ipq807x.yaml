@@ -95,7 +95,6 @@ jobs:
           echo "CONFIG_PACKAGE_lldpd=y" >> .config
           echo "CONFIG_PACKAGE_miniupnpd=y" >> .config
           echo "CONFIG_PACKAGE_procd-seccomp=y" >> .config
-          echo "CONFIG_PACKAGE_qos-scripts=y" >> .config
           echo "CONFIG_PACKAGE_wireguard=y" >> .config
           echo "CONFIG_PACKAGE_wget=y" >> .config
           # luci
@@ -105,7 +104,6 @@ jobs:
           echo "CONFIG_PACKAGE_luci-theme-bootstrap=y" >> .config          
           echo "CONFIG_PACKAGE_luci-app-ddns=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-firewall=y" >> .config
-          echo "CONFIG_PACKAGE_luci-app-qos=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-upnp=y" >> .config
           echo "CONFIG_PACKAGE_luci-mod-dashboard=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-wireguard=y" >> .config
