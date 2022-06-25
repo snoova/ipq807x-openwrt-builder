@@ -186,6 +186,6 @@ jobs:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           prerelease: true
           title: 'Updated prebuilt images (${{ env.BUILDINFO }})'
-          automatic_release_tag: ipq807x-latest@v5.0
+          automatic_release_tag: ipq807x-latest@v5.1
           files: bin/targets/ipq807x/generic/*
      
