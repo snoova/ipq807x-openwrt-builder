@@ -76,7 +76,6 @@ jobs:
           echo "CONFIG_PACKAGE_wpad-mini=n" >> .config
           echo "CONFIG_PACKAGE_wpad-basic-wolfssl=n" >> .config
           echo "CONFIG_PACKAGE_wpad-wolfssl=y" >> .config
-          echo "CONFIG_PACKAGE_libwolfssl=y" >> .config
           # services and tools
           echo "CONFIG_PACKAGE_wireguard=y" >> .config
           echo "CONFIG_PACKAGE_arp-scan=y" >> .config
