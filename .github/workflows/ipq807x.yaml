@@ -194,5 +194,5 @@ jobs:
           prerelease: true
           files: bin/targets/ipq807x/generic/*
           title: "Updated prebuilt images ${{ env.NOW }}"
-          automatic_release_tag: "ipq807x-${{ env.NOW }}"
+          automatic_release_tag: ipq807x-latest@v5.6
           auto_generate_release_notes: true
