@@ -63,6 +63,7 @@ jobs:
           echo 'CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256' >> .config
           echo 'CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y' >> .config
           echo 'CONFIG_TARGET_OPTIMIZATION="-Os -pipe -mcpu=cortex-a53"' >> .config
+          echo 'CONFIG_DEVFREQ_GOV_SIMPLE_ONDEMAND=y' >> .config
           #firmware
           # HW offloading is not active so we do not need this
           #echo "CONFIG_PACKAGE_nss-firmware-ipq8074=y" >> .config
@@ -194,5 +195,5 @@ jobs:
           prerelease: true
           files: bin/targets/ipq807x/generic/*
           title: "Updated prebuilt images ${{ env.NOW }}"
-          automatic_release_tag: ipq807x-latest@v5.6
+          automatic_release_tag: ipq807x-latest@v6.1
           auto_generate_release_notes: true
