@@ -79,7 +79,8 @@ jobs:
           echo "CONFIG_PACKAGE_wpad-wolfssl=y" >> .config
           # services and tools
           echo "CONFIG_PACKAGE_wireguard=y" >> .config
-          echo "CONFIG_PACKAGE_kmod_wireguard=y" >> .config
+          echo "CONFIG_PACKAGE_wireguard-tools=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-wireguard=y" >> .config
           echo "CONFIG_PACKAGE_arp-scan=y" >> .config
           echo "CONFIG_PACKAGE_bind-host=y" >> .config
           echo "CONFIG_PACKAGE_ca-certificates=y" >> .config                
