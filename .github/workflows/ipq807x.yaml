@@ -80,6 +80,8 @@ jobs:
           echo "CONFIG_PACKAGE_wpad-wolfssl=y" >> .config
           # services and tools
           echo "CONFIG_PACKAGE_wireguard=y" >> .config
+          echo "CONFIG_PACKAGE_wireguard-tools=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-wireguard=y" >> .config
           echo "CONFIG_PACKAGE_arp-scan=y" >> .config
           echo "CONFIG_PACKAGE_bind-host=y" >> .config
           echo "CONFIG_PACKAGE_ca-certificates=y" >> .config                
@@ -97,7 +99,6 @@ jobs:
           echo "CONFIG_PACKAGE_lldpd=y" >> .config
           echo "CONFIG_PACKAGE_miniupnpd=y" >> .config
           echo "CONFIG_PACKAGE_procd-seccomp=y" >> .config
-          echo "CONFIG_PACKAGE_wireguard=y" >> .config
           echo "CONFIG_PACKAGE_wget=y" >> .config
           # luci
           echo "CONFIG_PACKAGE_luci=y" >> .config
@@ -110,6 +111,7 @@ jobs:
           echo "CONFIG_PACKAGE_luci-app-upnp=y" >> .config
           echo "CONFIG_PACKAGE_luci-mod-dashboard=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-wireguard=y" >> .config
+          echo "CONFIG_PACKAGE_luci-proto-wireguard=Y" >>.config
           echo "CONFIG_PACKAGE_luci-app-ddns=y" >> .config
           echo "CONFIG_PACKAGE_less=n" >> .config
           # firewall4
@@ -195,5 +197,5 @@ jobs:
           prerelease: true
           files: bin/targets/ipq807x/generic/*
           title: "Updated prebuilt images ${{ env.NOW }}"
-          automatic_release_tag: ipq807x-latest@v6.1
+          automatic_release_tag: ipq807x-latest@v6.2
           auto_generate_release_notes: true
