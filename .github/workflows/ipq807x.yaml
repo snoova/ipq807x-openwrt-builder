@@ -13,8 +13,8 @@ jobs:
         run: |
           curl -sL "https://api.github.com/repos/$REMOTE_REPOSITORY/commits?sha=$REMOTE_BRANCH&per_page=1" | jq -r '[.[]][0]' > commit.json
         env:
-          REMOTE_REPOSITORY: dimfishr/openwrt
-          REMOTE_BRANCH: ipq807x-5.15-pr-increase
+          REMOTE_REPOSITORY: robimarko/openwrt
+          REMOTE_BRANCH: ipq807x-5.15-pr-final
       - name: Calculate hours since last commit
         id: calc
         run: |
@@ -40,8 +40,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: dimfishr/openwrt
-          ref: ipq807x-5.15-pr-increase
+          repository: robimarko/openwrt
+          ref: ipq807x-5.15-pr-final
       - name: Update and install feeds
         run: |
           ./scripts/feeds update -a
@@ -140,8 +140,8 @@ jobs:
           echo "CONFIG_PACKAGE_6rd=y" >> .config
           echo "CONFIG_PACKAGE_kmod-sit=y" >> .config
           # OpenVPN
-          # echo "CONFIG_PACKAGE_luci-app-openvpn=y" >> .config
-          # echo "CONFIG_PACKAGE_openvpn-openssl=y" >> .config
+          #echo "CONFIG_PACKAGE_luci-app-openvpn=y" >> .config
+          #echo "CONFIG_PACKAGE_openvpn-openssl=y" >> .config
           # WolfSSL
           #echo "CONFIG_PACKAGE_wpad-basic-wolfssl=m\n" >> .config
           #echo "CONFIG_PACKAGE_wpad-wolfssl=y\n" >> .config
